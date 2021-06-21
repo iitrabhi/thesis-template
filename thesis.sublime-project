@@ -6,7 +6,6 @@
 			[
 				// "*.cls",
 				"*.aux",
-				"*.md",
 				"*.gitignore"
 
 			],
