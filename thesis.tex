@@ -1,0 +1,48 @@
+\documentclass[11pt, english, onehalfspacing, headsepline,oneside]{MastersDoctoralThesis}
+\input{00.Preamble/preamble}
+\input{00.Preamble/thesis-info}
+\input{00.Preamble/custom_commands}
+\begin{document}
+	\newgeometry{left=3.0cm,right=3.0cm,top=3.0cm,bottom=3.0cm}
+% --------------------------------------------------------------
+% THESIS CONTENT - Front Matter --------------------------------
+% --------------------------------------------------------------
+	\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+	\pagestyle{plain} % Default to the plain heading style until the thesis style is called
+	\include{01.Cover/coverpage-new}
+	\include{02.Copyright/copyright}
+	\include{03.Declaration/declaration}
+	\include{04.Abstract/abstract}
+	\include{05.Acknowledgement/acknowledgements}
+	% \include{05.Acknowledgement/dedication}
+	\include{06.Contents/toc}
+% --------------------------------------------------------------
+% THESIS CONTENT - Chapters ------------------------------------
+% --------------------------------------------------------------
+	\mainmatter % Begin numeric (1,2,3...) page numbering
+	\pagestyle{thesis} % Return the page headers back to the "thesis" style
+
+	\include{07.Chapters/Chapter1/Chapter1}
+	\include{07.Chapters/Chapter2/Chapter2}
+	\include{07.Chapters/Chapter3/Chapter3}
+	\include{07.Chapters/Chapter4/Chapter4}
+	\include{07.Chapters/Chapter5/Chapter5}
+% --------------------------------------------------------------
+% THESIS CONTENT - Appendix ------------------------------------
+% ---------------------------------------- ----------------------
+	\appendix % Cue to tell LaTeX that the following "chapters" are Appendices
+
+	\include{08.Appendix/AppendixA}
+% --------------------------------------------------------------
+% THESIS CONTENT - Lists and Publications ----------------------
+% --------------------------------------------------------------
+	\pagestyle{plain}
+	\input{09.Lists/lists}
+	\input{09.Lists/publications}
+% --------------------------------------------------------------
+% THESIS CONTENT - Bibliography --------------------------------
+% --------------------------------------------------------------
+	\renewcommand{\bibsection}{\chapter*{\bibname}}
+	\bibliographystyle{plainnat}
+	\bibliography{10.References/main}
+\end{document}

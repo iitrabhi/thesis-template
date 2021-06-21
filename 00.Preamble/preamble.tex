@@ -1,0 +1,101 @@
+% \usepackage{times} % sets times new roman font
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{etoolbox}
+
+% \usepackage{palatino} % Use the Palatino font by default
+\usepackage{graphicx}
+\usepackage{lmodern}
+
+\usepackage{lineno,amstext,amssymb,bm}
+\usepackage{mathtools}
+\usepackage{enumitem}
+
+\usepackage{mathpazo} % Use the Palatino font by default
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+% maths symbol package
+\usepackage{stmaryrd}
+
+
+% to get jump operator
+\usepackage{multicol}
+% side by side equations
+\usepackage{IEEEtrantools}
+%--------------------------------------------------------------------------------------------------
+%% Code
+%--------------------------------------------------------------------------------------------------
+
+\usepackage{listings}
+
+%New colors defined below
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%Code listing style named "mystyle"
+\lstdefinestyle{mystyle}{
+  commentstyle=\color{codegreen},
+  keywordstyle=\color{blue},
+  numberstyle=\tiny\ttfamily\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\tiny,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  keepspaces=false,
+  numbers=left,
+  numbersep=6pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2
+}
+
+%"mystyle" code listing set
+\lstset{style=mystyle,
+        basicstyle = \ttfamily \footnotesize,
+        basewidth  = {0.5em,0.5em},
+        xleftmargin=0.3cm}
+%--------------------------------------------------------------------------------------------------
+%% bibliography styles
+%--------------------------------------------------------------------------------------------------
+\usepackage{float}
+\usepackage[numbers]{natbib}
+\usepackage[bookmarks=true,colorlinks=true,linkcolor=blue,citecolor=red,backref=page]{hyperref}
+\pdfstringdefDisableCommands{\let\uppercase\relax}
+
+\makeatletter
+\AtBeginDocument{\def\@citecolor{red}}
+\makeatother
+
+\usepackage[nameinlink,capitalize]{cleveref}
+
+% \biboptions{sort&compress}
+%--------------------------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------------------------
+%% Algorithm
+%--------------------------------------------------------------------------------------------------
+\usepackage{algorithm, algpseudocode}
+
+\providecommand\algorithmname{algorithm}
+
+\makeatletter
+\newcounter{algorithmicH}% New algorithmic-like hyperref counter
+\let\oldalgorithmic\algorithmic
+\renewcommand{\algorithmic}{%
+  \stepcounter{algorithmicH}% Step counter
+  \oldalgorithmic}% Do what was always done with algorithmic environment
+\renewcommand{\theHALG@line}{ALG@line.\thealgorithmicH.\arabic{ALG@line}}
+\makeatother
+%--------------------------------------------------------------------------------------------------
+%% Publication
+%--------------------------------------------------------------------------------------------------
+\usepackage[resetlabels]{multibib}
+\newcites{pub}{Papers in Refereed Journals}
+\newcites{conf}{National and International Conference Proceedings}
+\show\bibsection
+
+
