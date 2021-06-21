@@ -14,3 +14,13 @@ You can directly start using this template on Overleaf or if you wish to edit in
 This template will automatically create the `Title Page`, 	`Declaration Page` and `Acknowledgment page` with the data supplied by the student in `00.Preamble/thesis_info.tex` file. Please do not modify the above set of pages manually.
 
 ![Template design](./20.github/template.jpg)
+
+# First Build
+
+In sublime try different builder by using the key combination `ctrl+shift+b`. I get it to work by fist trying 
+
+- Tradational builder
+- Latex - Basic Builder
+- Latex - Basic Builder - PdfLatex
+
+Also try deleting the temprarory files if you have any problem with the build.
